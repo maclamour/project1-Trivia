@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Game</title>
+    <script src="./app.js" defer></script>
+    <h1>Trivia</h1>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="square"></div>
+      <div class="question-wrapper">
+        <div class="question"></div>
+
+        <div class=choices>
+          <div class="button" id="choice1">2</div>
+          <div class="button" id="choice2">3</div>
+          <div class="button" id="choice3">4</div>
+          <div class="button" id="choice4">5</div>
+        </div>
+      </div>
+    </div>
+
+    <button type="start-btn" id="go" >Start</button>
+    <button type="reset-btn" onClick="onClickReset()">Reset</button>
+  </body>
+</html>
