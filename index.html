@@ -9,7 +9,7 @@
     <h1 id="correctAnswer">Trivia</h1>
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <body onload="NextQuestion(0)">
+  <!-- <body onload="nextQuestion(0)"> -->
     <main>
       <div class="modal-container" id="score-modal">
         <div class="modal-content-container">
@@ -38,7 +38,7 @@
         <div class="“trivia-question-container”">
           <h1 id="display-question"></h1>
         </div>
-
+        <div class="square"></div>
         <div class="trivia-choices-container">
           <div class="modal-container" id="choice-modal">
             <div class="modal-content-container">
@@ -52,61 +52,59 @@
 
           <span>
             <input
-              type="radio"
-              id="choice-one"
+              type="button"
+              id="choice-1"
               name="“choices”"
-              class="radio"
+              class="button"
               value="choice1"
             />
             <label
               for="choice-one"
               class="“choices”"
-              id="choice-one-label"
+              id="choice-1-label"
             ></label>
           </span>
-
-          <span>
-            <input
-              type="radio"
-              id="choice-two"
+          <input
+              type="button"
+              id="choice-2"
               name="“choices”"
-              class="radio"
+              class="button"
               value="choice2"
             />
             <label
-              for="choice-two"
+              for="choice-one"
               class="“choices”"
-              id="choice-two-label"
+              id="choice-2-label"
             ></label>
           </span>
 
           <span>
             <input
-              type="radio"
-              id="choice-three"
+              type="button"
+              id="choice-3"
               name="“choices”"
-              class="radio"
-              value="choice2"
+              class="button"
+              value="choice3"
             />
             <label
               for="choice-three"
               class="“choices”"
-              id="choice-three-label"
+              id="choice-3-label"
             ></label>
           </span>
 
           <span>
             <input
-              type="radio"
-              id="choice-four"
+              type="button"
+              id="choice-4"
               name="“choices”"
-              class="radio"
+              class="button"
               value="choice4"
             />
             <label
-              for="choice-four"
+              for="choice-4"
               class="“choices”"
-              id="choice-four-label"
+              id="choice-4-label"
             ></label>
           </span>
         </div>

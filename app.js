@@ -1,8 +1,15 @@
+
+let questionNumber = 1
+let playerScore = 0
+let wrongAttempt = 0
+let indexNumber = 0
+
+
+
 // list of questions that will be used for the game
 const questionBank = [
   {
     question: "In what city and state was the game of basketball created?",
-    answers:
       choice1: "Homer, Alaska",
       choice2: "Kingman, Azizona",
       choice3: "Springfield, Massachusetts",
@@ -66,68 +73,50 @@ const questionBank = [
     choice3: "Iron Man",
     choice4: "Thor",
     correctChoice: "Choice1"
-   
   },
+   
+
 ];
-// gives random numbers- translates to index number and gives back a different question
 
-for (let i = 0; i < questionBank.length; i++) {
-  questionBank.sort(() => Math.random() - 0.5);
-  // works but i find that this will give me the same questions alot of the time
+// fuction used to shuffle the questions and make sure that it pushes new questions 
+
+let shuffleQuestions =[] 
+function handleQuestions() {
+    while (shuffleQuestions.length <= 5) {
+        const random = questions[Math.floor(Math.random() * questions.length)]
+        if (!shuffleQuestions.inculudes(random)) {
+            shuffleQuestions.push(random)
+            console.log(shuffleQuestions)
+        }
+    }
 }
-// check to see if we are able to breakdown questionBank- answer- true/false
-
-// start button
-
-function ready() {
-  testQuestion = questionBank[currentQuestion];
-  if (testQuestion){
-    question = testQuestion.question;
-    questionList[0].textContent = question;
-  
-    choice1.innerHTML = testQuestion.answers[0].text;
-    choice2.innerHTML = testQuestion.answers[1].text;
-    choice3.innerHTML = testQuestion.answers[2].text;
-    choice4.innerHTML = testQuestion.answers[3].text;
-  }
-
-  else {
-    alert("game over!!!!!")
-  }
-  
-
-  // homework for later
-  // for(let i = 0; i < testQuestion.answers.length; i++){
-  //         console.log(testQuestion.answers[i])
-  //     }
+//function that showed the next question in the []
+function nextQuestion(index){
+  handleQuestions()
+  const currentQuestion = shuffleQuestions[index] // current question
+  document.getElementById("question-number").innerHTML = questionNumber
+  document.getElementById("player-score").innerHTML = playerScore
+  document.getElementById("display-question").innerHTML = currentQuestion.question;
+  document.getElementById("choice-1-label").innerHTML = currentQuestion.choice1;
+  document.getElementById("choice-2-label").innerHTML = currentQuestion.choice2;
+  document.getElementById("choice-3-label").innerHTML = currentQuestion.choice3;
+  document.getElementById("choice-4-label").innerHTML = currentQuestion.choice4;
 }
-start.addEventListener("click", ready);
 
-// console.log(questionBank[1].answers)// works
-// console.log(questionBank[2].answers)// works
-// console.log(questionBank)
-// console.log(questionBank[0].answers)
+function checkForAnswer () {
+  const currentQuestion = shuffleQuestions[indexNumber] // shows current question
+  const currentQuestionAnswer = currentQuestion.correctChoice // shows answer to current question 
+  const choice = document.getElementsByName("choice");
+  let correctChoice = null
 
-// testQuestion = questionBank[0]
-// console.log(testQuestion)
+  // check button out to match answer selected 
+  choice.forEach((choice) => {
+    if (choice.vaule === currentQuestionAnswer) {
+    correctChoice = choice,labels[0].id
+  }
+  if (choice[0].checked === false && choice[1].checked === false & choice[2].checked === false && choice[3] === false){
+    document.getElementById('choice-modal').style.display = 'flex'
+  }
+})
 
-// question = testQuestion.question
-// console.log(question)
-
-// questionList[0].textContent = question
-
-// trying to get my buttons to work and have each button show the text of the answers and return if it is
-// it is the correct answer or not based on the questions object
-choiceList.forEach((choiceList) => {
-  choiceList.addEventListener("click", function (e) {
-    console.log(testQuestion);
-    let choice = e.target.innerText;
-    console.log(choice);
-    currentQuestion++
-    ready()
-  });
-
-});
-
-
-
+}
