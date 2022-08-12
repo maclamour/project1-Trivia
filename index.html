@@ -6,25 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trivia Game</title>
     <script src="./app.js" defer></script>
-    <h1 class="correctAnswer">Trivia</h1>
+    <h1 id="correctAnswer">Trivia</h1>
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <body>
-    <div class="container">
-      <div class="square"></div>
-      <div class="question-wrapper">
-        <div class="question"></div>
+  <body onload="NextQuestion(0)">
+    <main>
+      <div class="modal-container" id="score-modal">
+        <div class="modal-content-container">
+          <h1>Congratulations, thank you for playong!.</h1>
 
-        <div class=choices>
-          <div class="button" id="choice1">2</div>
-          <div class="button" id="choice2">3</div>
-          <div class="button" id="choice3">4</div>
-          <div class="button" id="choice4">5</div>
+          <div class="score-details">
+            <p>Attempts : 6</p>
+            <p>incorrect Answers : <span id="incorrect-answers"></span></p>
+            <p>correct Answers : <span id="correcr-answers"></span></p>
+            <p>score : <span id="grade-percentage"></span>%</p>
+            <p><span id="remarks"></span></p>
+          </div>
+
+          <div class="modal-button-container">
+            <button onclick="closeScoreModal()">Continue</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <button type="start-btn" id="go" >Start</button>
-    <button type="reset-btn" onClick="onClickReset()">Reset</button>
+      <div class="“trivia-quiz-container”">
+        <div class="“trivia-details-container”">
+          <h1>Score : <span id="player-score"></span> / 6</h1>
+          <h1>Question : <span id="question-number"></span> / 6</h1>
+        </div>
+
+        <div class="“trivia-question-container”">
+          <h1 id="display-question"></h1>
+        </div>
+
+        <div class="trivia-choices-container">
+          <div class="modal-container" id="choice-modal">
+            <div class="modal-content-container">
+              <h1>Did you forget to Select an answer?</h1>
+
+              <div class="modal-button-container">
+                <button onclick="closeChoiceModal()">Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <span>
+            <input
+              type="radio"
+              id="choice-one"
+              name="“choices”"
+              class="radio"
+              value="choice1"
+            />
+            <label
+              for="choice-one"
+              class="“choices”"
+              id="choice-one-label"
+            ></label>
+          </span>
+
+          <span>
+            <input
+              type="radio"
+              id="choice-two"
+              name="“choices”"
+              class="radio"
+              value="choice2"
+            />
+            <label
+              for="choice-two"
+              class="“choices”"
+              id="choice-two-label"
+            ></label>
+          </span>
+
+          <span>
+            <input
+              type="radio"
+              id="choice-three"
+              name="“choices”"
+              class="radio"
+              value="choice2"
+            />
+            <label
+              for="choice-three"
+              class="“choices”"
+              id="choice-three-label"
+            ></label>
+          </span>
+
+          <span>
+            <input
+              type="radio"
+              id="choice-four"
+              name="“choices”"
+              class="radio"
+              value="choice4"
+            />
+            <label
+              for="choice-four"
+              class="“choices”"
+              id="choice-four-label"
+            ></label>
+          </span>
+        </div>
+
+        <div class="next-button-container">
+          <button onclick="handleNextQuestion()">Next Question</button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

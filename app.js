@@ -135,16 +135,7 @@ choiceList.forEach((choiceList) => {
     console.log(testQuestion);
     let choice = e.target.innerText;
     console.log(choice);
-    if (choice === questionBank.correct){
-        correctAnswer.textContent = "correct"
-    }
-    else {
-        correctAnswer.textContent = "Wrong Answer"
-    }
-console.log(correctAnswer)
-
     currentQuestion++
-    // winLogic()
     ready()
   });
 
@@ -155,8 +146,7 @@ console.log(correctAnswer)
 // }
 
 // function winLogic(){
-//     console.log(choiceList,"choiceList")
-//     if (choiceList.choice === questionBank.correct){
+//     if (choice === questionBank.correct){
 //         correctAnswer.textContent = "correct"
 //     }
 //     else {
