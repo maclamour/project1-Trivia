@@ -1,84 +1,72 @@
-
-
-let currentQuestion = 0
-
-const questionList = document.getElementsByClassName("question");
-const choiceList = document.querySelectorAll(".button");
-const start = document.getElementById("go");
-// let real
-let choice1 = document.getElementById("choice1");
-let choice2 = document.getElementById("choice2");
-let choice3 = document.getElementById("choice3");
-let choice4 = document.getElementById("choice4");
-let correctAnswer = document.getElementsByClassName("correctAnswer")
-console.log(correctAnswer)
-// console.log(choice1);
-// console.log(start);
-
+// list of questions that will be used for the game
 const questionBank = [
   {
     question: "In what city and state was the game of basketball created?",
-    answers: [
-      { text: "Homer, Alaska"},
-      { text: "Kingman, Azizona"},
-      { text: "Springfield, Massachusetts"},
-      { text: "Las Vegas, Nevada"},
-    ],
-    correct: "Springfield, Massachusetts"
+    answers:
+      choice1: "Homer, Alaska",
+      choice2: "Kingman, Azizona",
+      choice3: "Springfield, Massachusetts",
+      choice4: "Las Vegas, Nevada",
+    
+    correctChoice: "Choice3"
 
   },
 
   {
+
     question: "What is the capital of the USA?",
-    answers: [
-      { text: "Washigton D.C."},
-      { text: "Boulder"},
-      { text: "Bogota"},
-      { text: "Nashville"},
-    ],
-    correct: "Washigton D.C."
+      choice1: "Washigton D.C.",
+      choice2: "Boulder",
+      choice3: "Bogota",
+      choice4: "Nashville",
+    
+    correctChoice: "Choice3"
+ 
   },
 
   {
+
     question: "Whos is Mickey Mouse's wife",
-    answers: [
-      { text: "Ariel"},
-      { text: "Jamsmine"},
-      { text: "Belle"},
-      { text: "Miney Mouse"},
-    ],
-    correct: "Miney Mouse"
+      choice1: "Ariel",
+      choice2: "Jamsmine",
+      choice3: "Belle",
+      choice4: "Miney Mouse",
+    
+    correctChoice: "Choice4"
+    
   },
 
   {
+
     question: "In a website browser address bar, what does www stand for?",
-    answers: [
-      { text: "World Wide Winners"},
-      { text: "World Wide Wages"},
-      { text: "World Wide Web"},
-      { text: "World Wide Weather"},
-    ],
-    correct: "World Wide Web"
+      choice1: "World Wide Winners",
+      choice2: "World Wide Wages",
+      choice3: "World Wide Web",
+      choice4: "World Wide Weather",
+    
+    correctChoice: "Choice3"
+    
   },
+  
   {
+
     question: "What is the indeity of Superman?",
-    answers: [
-      { text: "Peter Parker"},
-      { text: "Tom Brady"},
-      { text: "Yusuke Urameshi"},
-      { text: "Clark Kent"},
-    ],
-    correct: "Clark Kent"
+     choice1: "Peter Parker",
+     choice2: "Tom Brady",
+     choice3: "Yusuke Urameshi",
+     choice4: "Clark Kent",
+     correctChoice: "Choice4"
   },
+  
   {
+
     question: "In the MCU, who was the first Advenger?",
-    answers: [
-      { text: "Capital America"},
-      { text: "Bruce Banner"},
-      { text: "Iron Man"},
-      { text: "Thor"},
-    ],
-    correct: "Capital America"
+    choice1: "Capital America",
+    choice2: "Bruce Banner",
+    choice3: "Iron Man",
+    choice4: "Thor",
+    correctChoice: "Choice1"
+   
   },
 ];
 // gives random numbers- translates to index number and gives back a different question
@@ -141,16 +129,5 @@ choiceList.forEach((choiceList) => {
 
 });
 
-// if(currentQuestion.answers=== "true"){
-//     alert ("true")
-// }
 
-// function winLogic(){
-//     if (choice === questionBank.correct){
-//         correctAnswer.textContent = "correct"
-//     }
-//     else {
-//         correctAnswer.textContent = "Wrong Answer"
-//     }
-// }
 
