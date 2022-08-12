@@ -135,26 +135,32 @@ choiceList.forEach((choiceList) => {
     console.log(testQuestion);
     let choice = e.target.innerText;
     console.log(choice);
-    currentQuestion++
-    winLogic()
-    ready()
-  });
-
-});
-
-
-
-// if(currentQuestion.answers=== "true"){
-//     alert ("true")
-// }
-
-function winLogic(){
-    console.log(choiceList,"choiceList")
-    if (choiceList.choice === questionBank.correct){
+    if (choice === questionBank.correct){
         correctAnswer.textContent = "correct"
     }
     else {
         correctAnswer.textContent = "Wrong Answer"
     }
-}
+console.log(correctAnswer)
+
+    currentQuestion++
+    // winLogic()
+    ready()
+  });
+
+});
+
+// if(currentQuestion.answers=== "true"){
+//     alert ("true")
+// }
+
+// function winLogic(){
+//     console.log(choiceList,"choiceList")
+//     if (choiceList.choice === questionBank.correct){
+//         correctAnswer.textContent = "correct"
+//     }
+//     else {
+//         correctAnswer.textContent = "Wrong Answer"
+//     }
+// }
 
