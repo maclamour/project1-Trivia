@@ -92,7 +92,7 @@ function handleQuestions() {
 }
 //function that showed the next question in the []
 function nextQuestion(index){
-  handleQuestions()
+  handleQuestion()
   const currentQuestion = shuffleQuestions[index] // current question
   document.getElementById("question-number").innerHTML = questionNumber
   document.getElementById("player-score").innerHTML = playerScore
@@ -101,7 +101,10 @@ function nextQuestion(index){
   document.getElementById("choice-2-label").innerHTML = currentQuestion.choice2;
   document.getElementById("choice-3-label").innerHTML = currentQuestion.choice3;
   document.getElementById("choice-4-label").innerHTML = currentQuestion.choice4;
+  console.log(nextQuestion)
 }
+
+
 
 function checkForAnswer () {
   const currentQuestion = shuffleQuestions[indexNumber] // shows current question
@@ -109,14 +112,90 @@ function checkForAnswer () {
   const choice = document.getElementsByName("choice");
   let correctChoice = null
 
-  // check button out to match answer selected 
+  // if the button  was clicked 
   choice.forEach((choice) => {
     if (choice.vaule === currentQuestionAnswer) {
     correctChoice = choice,labels[0].id
   }
-  if (choice[0].checked === false && choice[1].checked === false & choice[2].checked === false && choice[3] === false){
-    document.getElementById('choice-modal').style.display = 'flex'
+  
+
+})
+
+if (choice[0].checked === false && choice[1].checked === false & choice[2].checked === false && choice[3] === false)
+{
+  document.getElementById('choice-modal').style.display = 'flex'
+}
+// checks to see if the button that is clicked has the same return
+  choice.forEach((choice)=> {
+    if (choice.checked === true && choice.vaule === currentQuestionAnswer){
+      document.getElementById(currentChoice).style.backgroundColor = "green"
+      playerScore++
+      indexNumber++
+      setTimeout(() => {
+        questionNumber++
+        }, 1000)
+    }
+      
+      else if (choice.checked && choice.vaule !== currentQuestionAnswer){
+        const incorrect_AnswersId = choice.labels[0].id
+        document.getElementById(incorrect_AnswersId).style.backgroundColor = "red"
+        document.getElementById(currentChoice).style.backgroundColor = "green"
+        wrongAttempt++
+        indexNumber++
+        setTimeout(() => {
+          questionNumber++
+        }, 1000)
+      }
+  })
+}
+
+function handleNextQuestions(){
+  checkForAnswer()
+  unCheckChoicesButtons()
+  setTimeout(() => {
+  if (indexNumber <= 5){
+    NextQuestion(indexNumber)
   }
+  else{
+    handleEndGame()
+  }
+  resetChoiceBackground()
+}, 1000);
+
+}
+
+function resetChoiceBackground(){
+  const choice = document.getElementsByName("choices");
+  choice.forEach((choice) => {
+    document.getElementById(choice.labels[0].id).style.backgroundColor = ""
 })
 
 }
+// makes sure that the nect question's buttons are unclicked 
+function unCheckChoicesButtons(){
+  const choice = document.getElementsByName("choice")
+  for let i = 0; i < choice.length; i++) {
+    choice[i]. checked = false;
+  }
+}
+// kicks in when all the questions have been answered 
+function handleEndGame() {
+  let remark = null
+  let remarkColor = null
+if (playerScore <= 3){
+  remark = "Better luck next time!"
+  remarkColor = "red"
+}
+else if (playerScore >= 4 && playerScore < 7){
+  remark = "Rockstar"
+  remark = "green"
+}
+const playerTally = (playerScore/6) * 100 
+
+}
+
+// trivia data
+document.getElementById()
+
+
+    

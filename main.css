@@ -64,6 +64,6 @@ text-align: center;
 animation: ease-in;
 }
 
-#startButton {
+.next-button-container {
     font-size: 30px;
 }
