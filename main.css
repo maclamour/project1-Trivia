@@ -27,7 +27,7 @@ body    {
 
   }
 
-  .choices {
+  #answer-buttons {
     display: block;
     justify-content: flex-end;
     align-items: center;
@@ -36,17 +36,24 @@ body    {
     align-content: center;
   }
 
-  .button {
+  .btn {
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
     background-color: royalblue;
     border: 1px solid #ffcc80;
     border-radius: 5px;
-    padding: 8px;
-    width: 300px;
+    padding: 5px 10px;
+    width: 800px;
     border-radius: 50px;
+    font-size: 20px;
 
 }
 
-.button:hover {
+.btn:hover {
     cursor: pointer;
     box-shadow: 0 0.64px 22.4px 0 rgba(rgb(0, 242, 255), green, b, alpha, 0.5);
     transform: scale(1.02);
@@ -64,6 +71,10 @@ text-align: center;
 animation: ease-in;
 }
 
-.next-button-container {
-    font-size: 30px;
+#next-btn {
+    font-size: 20px;
+}
+
+#stat-btn {
+  font-size: 20px;
 }
