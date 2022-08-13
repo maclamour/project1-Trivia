@@ -32,7 +32,7 @@ let currentQuestion = 0
 const startButton = document.querySelector("#start-btn")
 const nextButton = document.querySelector("#next-btn")
 const questionContanierElement = document.querySelector("#question-contanier")
-const question = document.querySelector("#question")
+const questionElement = document.querySelector("#question")
 const answerButtonElement = document.querySelector("#answer-buttons")
 // let choice1 = document.getElementById("choice1");
 // let choice2 = document.getElementById("choice2");
@@ -40,8 +40,8 @@ const answerButtonElement = document.querySelector("#answer-buttons")
 // let choice4 = document.getElementById("choice4");
 // console.log(choice1);
 // console.log(start);
-let correctAnswer = document.getElementsByClassName("correctAnswer")
-console.log(correctAnswer)
+// let correctAnswer = document.getElementsByClassName("correctAnswer")
+// console.log(correctAnswer)
 // console.log(choice1);
 // console.log(start);
 
@@ -115,6 +115,31 @@ const questionBank = [
 ];
 
 console.log(questionBank)
+
+
+let shuffleQuestions, currentQuestionIndex
+const startGame = () => {
+  startButton.classList.add("hide")
+  shuffleQuestions = questionBank.sort(() => Math.random() - 0.5);
+  currentQuestionIndex = 0
+  questionContanierElement.classList.remove("hide");
+  setNextQuestion();
+};
+
+startButton.addEventListener("click", startGame)
+
+const setNextQuestion = () => {
+  resetState ();
+  displayQuestion(shuffleQuestions[currentQuestionIndex]);
+
+};
+
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++
+  setNextQuestion();
+}
+
+
  
 // gives random numbers- translates to index number and gives back a different question
 
