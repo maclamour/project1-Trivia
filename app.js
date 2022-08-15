@@ -16,7 +16,7 @@ console.log(correctAnswer)
 
 const questionBank = [
   {
-    question: "In what city and state was the game of basketball created?",
+    question: "In What City And State Was The Game Of Basketball Created?",
     answers: [
       { text: "Homer, Alaska"},
       { text: "Kingman, Azizona"},
@@ -28,7 +28,7 @@ const questionBank = [
   },
 
   {
-    question: "What is the capital of the USA?",
+    question: "What Is The Capital Of The USA?",
     answers: [
       { text: "Washigton D.C."},
       { text: "Boulder"},
@@ -39,7 +39,7 @@ const questionBank = [
   },
 
   {
-    question: "Whos is Mickey Mouse's wife",
+    question: "Which Of These Character's is Mickey Mouse's Wife",
     answers: [
       { text: "Ariel"},
       { text: "Jamsmine"},
@@ -50,7 +50,7 @@ const questionBank = [
   },
 
   {
-    question: "In a website browser address bar, what does www stand for?",
+    question: "In The Website Browser Address Bar, What Does WWW Stand For?",
     answers: [
       { text: "World Wide Winners"},
       { text: "World Wide Wages"},
@@ -60,7 +60,7 @@ const questionBank = [
     correct: "World Wide Web"
   },
   {
-    question: "What is the indeity of Superman?",
+    question: "What Is The True Indeity Of Superman?",
     answers: [
       { text: "Peter Parker"},
       { text: "Tom Brady"},
@@ -70,7 +70,7 @@ const questionBank = [
     correct: "Clark Kent"
   },
   {
-    question: "In the MCU, who was the first Advenger?",
+    question: "In The MCU, Who Was The First Advenger?",
     answers: [
       { text: "Captain America"},
       { text: "Bruce Banner"},
@@ -101,7 +101,7 @@ function ready() {
   }
 
   else {
-  prompt("game over!!!!!")
+  correctAnswer.innerText = "GAME OVER!!!!"
   }
   
 }

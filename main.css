@@ -73,6 +73,16 @@ color: aquamarine;
 font-size: 100px;
 }
 
-#startButton {
+.startButton {
   font-size: 30px;
+}
+
+.start-btn {
+  font-size: 30px;
+  background-color: blanchedalmond;
+}
+
+.reset-btn {
+  font-size:30px;
+  background-color: blanchedalmond ;
 }
