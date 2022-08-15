@@ -12,8 +12,7 @@ let choice3 = document.getElementById("choice3");
 let choice4 = document.getElementById("choice4");
 let correctAnswer = document.getElementById("correctAnswer")
 console.log(correctAnswer)
-// console.log(choice1);
-// console.log(start);
+
 
 const questionBank = [
   {
@@ -83,23 +82,11 @@ const questionBank = [
 ];
 
 
-// gives random numbers- translates to index number and gives back a different question
-
 for (let i = 0; i < questionBank.length; i++) {
   questionBank.sort(() => Math.random() - 0.5);
   // works but i find that this will give me the same questions alot of the time
 }
 
-
-// console.log(questionBank[0].correct) // isolates the correct answer field 
-// console.log(choice1.innerHTML)
-// console.log(choiceList)
-
-// Console.log()
-
-// check to see if we are able to breakdown questionBank- answer- true/false
-
-// start button
 
 function ready() {
   testQuestion = questionBank[currentQuestion];
@@ -117,29 +104,12 @@ function ready() {
   prompt("game over!!!!!")
   }
   
-
-  // homework for later
-  // for(let i = 0; i < testQuestion.answers.length; i++){
-  //         console.log(testQuestion.answers[i])
-  //     }
 }
+
+
 start.addEventListener("click", ready);
 
-// console.log(questionBank[1].answers)// works
-// console.log(questionBank[2].answers)// works
-// console.log(questionBank)
-// console.log(questionBank[0].answers)
 
-// testQuestion = questionBank[0]
-// console.log(testQuestion)
-
-// question = testQuestion.question
-// console.log(question)
-
-// questionList[0].textContent = question
-
-// trying to get my buttons to work and have each button show the text of the answers and return if it is
-// it is the correct answer or not based on the questions object
 choiceList.forEach((choiceList) => {
   choiceList.addEventListener("click", function (e) {
     // console.log(testQuestion);
@@ -151,7 +121,7 @@ choiceList.forEach((choiceList) => {
         i = questionBank.length
       
       }
-  //  console.log(questionBank.correct)
+
       
     else { 
         correctAnswer.innerText = "WRONG ANSWER 🫠";
