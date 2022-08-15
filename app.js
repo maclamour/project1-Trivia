@@ -33,7 +33,10 @@ const startButton = document.querySelector("#start-btn")
 const nextButton = document.querySelector("#next-btn")
 const questionContanierElement = document.querySelector("#question-contanier")
 const questionElement = document.querySelector("#question")
+
 const answerButtonElement = document.querySelector("#answer-buttons")
+
+
 // let choice1 = document.getElementById("choice1");
 // let choice2 = document.getElementById("choice2");
 // let choice3 = document.getElementById("choice3");
@@ -124,9 +127,10 @@ const startGame = () => {
   currentQuestionIndex = 0
   questionContanierElement.classList.remove("hide");
   setNextQuestion();
+  startButton.addEventListener("click", startGame)
 };
 
-startButton.addEventListener("click", startGame)
+// startButton.addEventListener("click", startGame)
 
 const setNextQuestion = () => {
   resetState ();
@@ -137,7 +141,21 @@ const setNextQuestion = () => {
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
   setNextQuestion();
-}
+});
+
+const displayQuestion = (question) => {
+  questionElement.innerText = question.question; 
+  question.answers.forEach((answer) => {
+    const button = document.createElement  ("button");
+    button.innerText = answer.text; 
+    button.classList.add("btn");
+    if (answer.correct){
+      button.dataset.correct = answer.correct; 
+    }
+    button.addEventListener("click", chooseAnswer);
+    answerButtonElement.appendChild(button);
+  });
+}; 
 
 
  
