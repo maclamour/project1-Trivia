@@ -148,7 +148,7 @@ choiceList.forEach((choiceList) => {
       // console.log(e.target.innerText)
       if (choice === questionBank[i].correct ){
         correctAnswer.innerText = "CORRECT 💯"; 
-        i = questionBank.length 
+        i = questionBank.length
       
       }
   //  console.log(questionBank.correct)
