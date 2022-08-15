@@ -90,9 +90,13 @@ for (let i = 0; i < questionBank.length; i++) {
   // works but i find that this will give me the same questions alot of the time
 }
 
+console.log(`length: ${btn.length}`)
+
 // console.log(questionBank[0].correct) // isolates the correct answer field 
 // console.log(choice1.innerHTML)
 // console.log(choiceList)
+
+// Console.log()
 
 // check to see if we are able to breakdown questionBank- answer- true/false
 
@@ -141,14 +145,14 @@ choiceList.forEach((choiceList) => {
   choiceList.addEventListener("click", function (e) {
     console.log(testQuestion);
     let choice = e.target.innerText;
-    console.log(choice);
+    // console.log(choice);
     if (choice === questionBank.correct){
         correctAnswer.innerHTML = "correct"
     }
     else {
         correctAnswer.innerHTML = "Wrong Answer"
     }
-console.log(correctAnswer)
+
 
     currentQuestion++
     // winLogic()
@@ -156,20 +160,4 @@ console.log(correctAnswer)
   });
 
 });
-
-
-
-// if(currentQuestion.answers=== "true"){
-//     alert ("true")
-// }
-
-// function winLogic(){
-//     console.log(choiceList,"choiceList")
-//     if (choiceList.choice === questionBank.correct){
-//         correctAnswer.textContent = "correct"
-//     }
-//     else {
-//         correctAnswer.textContent = "Wrong Answer"
-//     }
-// }
 
