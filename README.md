@@ -22,7 +22,7 @@ HTML was the bases of getting the proper layout to ensure that the sqaure pictur
 This code pictured abvoe has been most challeging to wrap my head around. This has given me better understanding of how to structure code but also has given me the hardest time in figuring out. 
 
 # Link to Game:
-
+https://maclamour.github.io/project1-Trivia/
 # Next Steps; 
 
 There was a lot that I wanted to do to make this game more interactive, fun, and visually appealing. I was also not able to get my reset button to work so that was a bummer. I hope that as I gain more experience I am able to go back into this game and completely redo it. It will be a good gauge of where I started as a brand new coder to how much I was able to learn after this course is completed. 

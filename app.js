@@ -73,12 +73,12 @@ const questionBank = [
   {
     question: "In the MCU, who was the first Advenger?",
     answers: [
-      { text: "Capital America"},
+      { text: "Captain America"},
       { text: "Bruce Banner"},
       { text: "Iron Man"},
       { text: "Thor"},
     ],
-    correct: "Capital America"
+    correct: "Captain America"
   },
 ];
 
@@ -114,7 +114,7 @@ function ready() {
   }
 
   else {
-  alert("game over!!!!!")
+  prompt("game over!!!!!")
   }
   
 
@@ -142,17 +142,23 @@ start.addEventListener("click", ready);
 // it is the correct answer or not based on the questions object
 choiceList.forEach((choiceList) => {
   choiceList.addEventListener("click", function (e) {
-    console.log(testQuestion);
-    let choice = e.target.innerText;
+    // console.log(testQuestion);
     for (i = 0; i < questionBank.length; i++ ){
+      let choice = e.target.innerText;
+      // console.log(e.target.innerText)
       if (choice === questionBank[i].correct ){
-        correctAnswer.innerText = "CORRECT 💯 ";  
-        console.log(choice)
+        correctAnswer.innerText = "CORRECT 💯"; 
+        i = questionBank.length 
+      
       }
-   
-    else if (choice !== questionBank[i].correct){ 
+  //  console.log(questionBank.correct)
+      
+    else { 
         correctAnswer.innerText = "WRONG ANSWER 🫠";
+        // console.log(`choice: ${choice} - Correct answer: ${questionBank[i].correct}`)
       }
+      
+
     }
     currentQuestion++
     ready()
@@ -161,4 +167,5 @@ choiceList.forEach((choiceList) => {
 
 
 });
+
 
