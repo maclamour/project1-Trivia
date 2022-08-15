@@ -6,29 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trivia Game</title>
     <script src="./app.js" defer></script>
-    <h1>Trivia</h1>
+    <h1 id="correctAnswer">Trivia</h1>
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <div class="square"></div>
     <div class="container">
-      <div class="question-contanier">
+      <div class="square"></div>
+      <div class="question-wrapper">
         <div class="question"></div>
 
-        <div id= "answer-buttons">
-            <button class="btn">choice 1</button>
-            <button class="btn">choice 2</button>
-            <button class="btn" >choice 3</button>
-            <button class="btn">choice 4</button>
+        <div class=choices>
+          <div class="btn" id="choice1">1</div>
+          <div class="btn" id="choice2">2</div>
+          <div class="btn" id="choice3">3</div>
+          <div class="btn" id="choice4">4</div>
         </div>
       </div>
     </div>
-    <button id="stat-btn" >Start</button>
-    <button id="next-btn">Next</button>
 
-    </div>
-
-
-   
+    <button type="start-btn" id="go" >Start</button>
+    <button type="reset-btn" onClick="onClickReset()">Reset</button>
   </body>
 </html>

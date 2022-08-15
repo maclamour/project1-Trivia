@@ -1,64 +1,62 @@
 body    {
-    background-color: darkgray;
-    width: 100%;
-    bac
-    
+  background-color: darkgray;
+  width: 100%;
+  background-image: url("./imgs/question\ 2.png");
+  background-size: cover;
+  
 }
 
 
-  .container {
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .square {
-    width: 300px;
-    height: 300px;
-    border: 1px solid gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0%;
-    background-image: url("./imgs/question.png");
-    background-size: cover;
+.square {
+  width: 300px;
+  height: 300px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0%;
+  background-image: url("./imgs/question.png");
+  background-size: cover;
 
 
-  }
+}
 
-  #answer-buttons {
-    display: block;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-  }
+.choices {
+  display: block;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+}
 
-  .btn {
-    display: block;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    background-color: royalblue;
-    border: 1px solid #ffcc80;
-    border-radius: 5px;
-    padding: 5px 10px;
-    width: 800px;
-    border-radius: 50px;
-    font-size: 20px;
+.btn {
+  background-color: royalblue;
+  border: 1px solid #ffcc80;
+  border-radius: 5px;
+  padding: 8px;
+  width: 300px;
+  border-radius: 50px;
 
 }
 
 .btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.64px 22.4px 0 rgba(rgb(0, 242, 255), green, b, alpha, 0.5);
-    transform: scale(1.02);
-   transition: 100ms;
+  cursor: pointer;
+  box-shadow: 0 0.64px 22.4px 0 rgba(rgb(0, 242, 255), green, b, alpha, 0.5);
+  transform: scale(1.02);
+ transition: 100ms;
 
+}
+
+.question-wrapper {
+  font-size: 50px;
 }
 
 .question{
@@ -69,12 +67,10 @@ animation:cubic-bezier(0.075, 0.82, 0.165, 1);
 h1 {
 text-align: center;
 animation: ease-in;
+color: aquamarine;
+font-size: 100px;
 }
 
-#next-btn {
-    font-size: 20px;
-}
-
-#stat-btn {
-  font-size: 20px;
+#startButton {
+  font-size: 30px;
 }
