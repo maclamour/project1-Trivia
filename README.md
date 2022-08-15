@@ -7,7 +7,10 @@ Trivia is a type of game in which players (who can play individually or in a tea
 
 ![](../../../Desktop/Screen%20Shot%202022-08-15%20at%206.56.02%20AM.png)
 
-The picture above will be what the player first see's when they first start the game, the game will not start until the player clicks on start 
+
+
+
+The picture above will be what the player first see's when the first start the game, the game will not start until the player clicks on start 
 
 The picture below is a sample question that will be randomaly selected when the answers the question or resets the game 
 ![](../../../Desktop/Screen%20Shot%202022-08-15%20at%206.56.17%20AM.png)
