@@ -12,7 +12,8 @@ Trivia is a type of game in which players (who can play individually or in a tea
 The picture above will be what the player first see's when they first start the game, the game will not start until the player clicks on start button. 
 
 The picture below is a sample question that will be randomaly selected when the an answer has been selected or resets the game (manually)
-![](imgs/screen2.png)
+![screen 2](https://user-images.githubusercontent.com/16377912/184913111-81f1a27a-1620-478b-bdf1-551b0567eb96.png)
+
 
 # Technolgy used: 
 HTML was the bases of getting the proper layout to ensure that the sqaure contanier, buttons (start and reset), the header, and the answer tabs were bulit. JS was used to ensure that the functions of the game were called. Pretty much what we tell the computer to do and how. The CSS is the degsin piece that gives the background colors, text size, the background image, and sqaure box image life. 
