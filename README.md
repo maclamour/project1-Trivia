@@ -18,8 +18,9 @@ The picture below is a sample question that will be randomaly selected when the 
 HTML was the bases of getting the proper layout to ensure that the sqaure contanier, buttons (start and reset), the header, and the answer tabs were bulit. JS was used to ensure that the functions of the game were called. Pretty much what we tell the computer to do and how. The CSS is the degsin piece that gives the background colors, text size, the background image, and sqaure box image life. 
 
 # Challege Code:
-![](imgs/screen1.png)
-![](imgs/screen2.png)
+
+![code 1](https://user-images.githubusercontent.com/16377912/184912914-4c065ce9-a01e-4e81-8950-3bf863174cf5.png)
+![code 2](https://user-images.githubusercontent.com/16377912/184912919-baa3d10e-900f-4c16-ad6c-337d3d810cbc.png)
 
 This code pictured abvoe has been most challeging to wrap my head around. This has given me better understanding of how to structure code but also has given me the hardest time in figuring out. Console logging was very key to figuring out where I was going wrong
 
